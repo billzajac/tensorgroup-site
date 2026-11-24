@@ -44,7 +44,7 @@
         <a href="#work">Work</a>
         <a href="#approach">Approach</a>
         <a href="#contact">Contact</a>
-        <a class="btn btn--outline nav__cta" href="mailto:info@tensor.group">Get in touch</a>
+        <a class="btn btn--outline nav__cta" href="#contact">Get in touch</a>
       </nav>
     </div>
   </header>
@@ -61,7 +61,7 @@
         <p class="hero__sub">Systems architecture and AI integration for teams that need it
           done right — and governed at scale.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="mailto:info@tensor.group">Get in touch</a>
+          <a class="btn btn--primary" href="#contact">Get in touch</a>
           <a class="btn btn--ghost" href="#work">See selected work <span aria-hidden="true">→</span></a>
         </div>
       </div>
@@ -227,7 +227,11 @@
         <h2 class="contact__title">Let's talk.</h2>
         <p class="contact__sub">Tensor Group takes on a small number of selective engagements.
           If that's you, get in touch.</p>
-        <a class="btn btn--primary btn--lg" href="mailto:info@tensor.group">info@tensor.group</a>
+        <div class="contact__actions">
+          <a class="btn btn--primary btn--lg" href="mailto:info@tensor.group">info@tensor.group</a>
+          <button class="btn btn--outline btn--lg" type="button" id="copy-email" data-email="info@tensor.group" hidden>Copy email</button>
+        </div>
+        <p class="contact__status" id="copy-status" role="status" aria-live="polite"></p>
       </div>
     </section>
 

@@ -75,7 +75,8 @@ Copy rules (keep the tone consistent):
 - Brochure-terse. Every section earns its words. When in doubt, cut.
 - Brand-only: it's "Tensor Group", written in first person ("I"). No personal name or photo.
 - **No rates** on the site. Premium is signaled through language and pedigree.
-- Primary CTA is always `mailto:info@tensor.group`.
+- "Get in touch" buttons go to `#contact`. The contact section has the `mailto:info@tensor.group`
+  button plus a "Copy email" button, because `mailto:` does nothing on a device with no mail app.
 - Project cards should stay factually accurate — don't invent specifics.
 
 To add a work card, copy an existing `<article class="workcard">` block; add

@@ -13,6 +13,42 @@
     window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ---------- Copy email ----------
+     A mailto: link does nothing on a device with no mail app set up,
+     so the contact section also offers a copy button. */
+  (function copyEmail() {
+    var btn = document.getElementById("copy-email");
+    var status = document.getElementById("copy-status");
+    if (!btn || !status) return;
+    var email = btn.getAttribute("data-email");
+    function fallbackCopy() {
+      var ta = document.createElement("textarea");
+      ta.value = email;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "absolute";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+      document.body.removeChild(ta);
+      return ok;
+    }
+    function done(ok) {
+      status.textContent = ok ? "Copied " + email : "Copy did not work. The address is " + email;
+      if (ok) btn.textContent = "Copied";
+      setTimeout(function () { btn.textContent = "Copy email"; }, 2500);
+    }
+    btn.hidden = false;
+    btn.addEventListener("click", function () {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(function () { done(true); }, function () { done(fallbackCopy()); });
+      } else {
+        done(fallbackCopy());
+      }
+    });
+  })();
+
   /* ---------- 2) Scroll reveal ---------- */
   (function scrollReveal() {
     var els = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
