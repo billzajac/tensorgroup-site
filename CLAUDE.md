@@ -67,7 +67,7 @@ Source of truth is the `:root` block in `styles.css`. Key values:
 ## Editing content
 
 All copy lives in `index.html` as plain HTML — edit the relevant `<section>`. Sections in
-order: nav, hero, trust bar, "What I do" (3 cards), "Selected work" (4 cards), about,
+order: nav, hero, trust bar, "What I do" (3 cards), "Selected work" (4 cards, then "Open source & projects", 3 cards), about,
 contact, footer.
 
 Copy rules (keep the tone consistent):

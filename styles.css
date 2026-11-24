@@ -286,6 +286,13 @@ section[id],main[id]{scroll-margin-top:calc(var(--nav-h) + 16px)}
   background:rgba(245,147,30,.06);
 }
 .workcard__body{color:var(--fg-muted);font-size:.975rem}
+.workcard__links{display:flex;flex-wrap:wrap;gap:.25rem var(--s-3);margin-top:.9rem}
+.workcard__links a{
+  display:inline-flex;align-items:center;gap:.3rem;min-height:44px;
+  font-family:var(--font-display);font-weight:600;font-size:.9rem;color:var(--accent);text-decoration:none;
+}
+.workcard__links a:hover,.workcard__links a:focus-visible{text-decoration:underline;text-underline-offset:3px}
+.subsection__title{font-size:1.35rem;margin:var(--s-5) 0 var(--s-3)}
 
 /* ---------- about prose ---------- */
 .prose p{color:var(--fg-muted);font-size:1.075rem;margin-bottom:var(--s-3)}
