@@ -309,7 +309,6 @@ section[id],main[id]{scroll-margin-top:calc(var(--nav-h) + 16px)}
 .contact__title{font-size:clamp(2.4rem,1.6rem + 4vw,4rem);margin-bottom:var(--s-2)}
 .contact__sub{color:var(--fg-muted);max-width:44ch;margin:0 auto var(--s-4);font-size:1.1rem}
 .contact__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s-2)}
-.contact__status{min-height:1.5em;margin-top:var(--s-2);color:var(--fg-muted);font-size:.95rem}
 
 /* ---------- footer ---------- */
 .footer{border-top:1px solid var(--border);padding-block:var(--s-4)}
