@@ -287,6 +287,7 @@ section[id],main[id]{scroll-margin-top:calc(var(--nav-h) + 16px)}
 .workcard--wide{grid-column:1/-1;display:flex;align-items:center;gap:var(--s-4)}
 .workcard__logo{flex:none;width:120px;height:auto}
 @media (max-width:640px){.workcard--wide{flex-direction:column;align-items:flex-start}.workcard__logo{width:96px}}
+.workcard__shot{display:block;width:100%;height:auto;border-radius:calc(var(--radius) - 4px);margin-bottom:var(--s-3)}
 .workcard__body{color:var(--fg-muted);font-size:.975rem}
 .workcard__links{display:flex;flex-wrap:wrap;gap:.25rem var(--s-3);margin-top:.9rem}
 .workcard__links a{
